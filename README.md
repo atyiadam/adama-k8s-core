@@ -1,0 +1,1 @@
+# adama-k8s-core
