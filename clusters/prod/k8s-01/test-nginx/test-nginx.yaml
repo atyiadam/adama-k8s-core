@@ -1,26 +1,26 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: test-nginx
-#   namespace: argocd
-# spec:
-#   project: default
-#   source:
-#     repoURL: https://github.com/atyiadam/adama-k8s-core
-#     targetRevision: HEAD
-#     path: charts/test-nginx
-#     helm:
-#       values: |
-#         replicaCount: 2
-#         service:
-#           type: NodePort
-#           nodePort: 30088
-#   destination:
-#     server: https://kubernetes.default.svc
-#     namespace: test-nginx
-#   syncPolicy:
-#     automated:
-#       prune: true
-#       selfHeal: true
-#     syncOptions:
-#       - CreateNamespace=true
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-nginx
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/atyiadam/adama-k8s-core
+    targetRevision: HEAD
+    path: charts/test-nginx
+    helm:
+      values: |
+        replicaCount: 2
+        service:
+          type: NodePort
+          nodePort: 30088
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: test-nginx
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
