@@ -1,15 +1,18 @@
+csi-driver-nfs:
+  controller:
+    replicas: 1
+  node:
+    tolerations: [] 
+    
 storageClasses:
-  synologyNfsCsiMedia:
-    enabled: true
-    type: nfs-csi
+  media:
     name: synology-nfs-csi-media
-    isDefault: false
+    provisioner: nfs.csi.k8s.io
     reclaimPolicy: Retain
     volumeBindingMode: Immediate
-    provisioner: nfs.csi.k8s.io
-    parameters:
-      server: "synology.home.adamatyi.com"
-      share: "/volume1/media"
     mountOptions:
       - hard
       - nfsvers=4.1
+    parameters:
+      server: synology.home.adamatyi.com
+      share: /volume1/media

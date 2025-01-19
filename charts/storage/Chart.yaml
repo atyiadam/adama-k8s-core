@@ -1,4 +1,9 @@
 apiVersion: v2
 name: storage
-description: Storage Classes configuration for cluster
+description: Storage configuration for the cluster
+type: application
 version: 0.1.0
+dependencies:
+  - name: csi-driver-nfs
+    version: 4.9.0
+    repository: https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts
