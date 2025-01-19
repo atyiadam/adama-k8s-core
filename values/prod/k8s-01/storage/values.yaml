@@ -1,0 +1,15 @@
+storageClasses:
+  synologyNfsCsiMedia:
+    enabled: true
+    type: nfs-csi
+    name: synology-nfs-csi-media
+    isDefault: false
+    reclaimPolicy: Retain
+    volumeBindingMode: Immediate
+    provisioner: nfs.csi.k8s.io
+    parameters:
+      server: "synology.home.adamatyi.com"
+      share: "/volume1/media"
+    mountOptions:
+      - hard
+      - nfsvers=4.1
