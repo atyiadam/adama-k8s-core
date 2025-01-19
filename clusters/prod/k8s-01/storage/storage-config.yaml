@@ -19,6 +19,7 @@ spec:
             reclaimPolicy: Retain
             volumeBindingMode: Immediate
             provisioner: nfs.csi.k8s.io
+            parameters:
               server: "synology.home.adamatyi.com"
               share: "/volume1/media"
             mountOptions:
