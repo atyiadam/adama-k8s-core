@@ -1,4 +1,4 @@
 apiVersion: v2
-name: storage-config
+name: storage
 description: Storage Classes configuration for cluster
 version: 0.1.0
