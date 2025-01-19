@@ -14,7 +14,7 @@ spec:
         storageClasses:
           synologyNfsCsi:
             enabled: true
-            name: synology-nfs-csi
+            name: synology-nfs-csi-media
             isDefault: false
             reclaimPolicy: Retain
             volumeBindingMode: Immediate
