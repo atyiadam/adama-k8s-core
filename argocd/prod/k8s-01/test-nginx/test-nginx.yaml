@@ -11,7 +11,7 @@ spec:
     path: charts/test-nginx
     helm:
       valueFiles:
-        - ../../../../values/prod/k8s-01/test-nginx/values.yaml 
+        - ../../values/prod/k8s-01/test-nginx/values.yaml 
   destination:
     server: https://kubernetes.default.svc
     namespace: test-nginx

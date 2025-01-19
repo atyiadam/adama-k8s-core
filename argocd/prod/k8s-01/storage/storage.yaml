@@ -11,7 +11,7 @@ spec:
     path: charts/storage
     helm:
       valueFiles:
-        - ../../../../values/prod/k8s-01/storage/values.yaml
+        - ../../values/prod/k8s-01/storage/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system
