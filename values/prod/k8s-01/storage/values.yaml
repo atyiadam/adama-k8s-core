@@ -6,6 +6,7 @@ csi-driver-nfs:
     
 storageClasses:
   media:
+    enabled: true
     name: synology-nfs-csi-media
     provisioner: nfs.csi.k8s.io
     reclaimPolicy: Retain
