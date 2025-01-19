@@ -17,3 +17,4 @@ storageClasses:
     parameters:
       server: synology.home.adamatyi.com
       share: /volume1/media
+      subDir: ""
