@@ -4,17 +4,3 @@ csi-driver-nfs:
   node:
     tolerations: [] 
     
-storageClasses:
-  media:
-    enabled: true
-    name: synology-nfs-csi-media
-    provisioner: nfs.csi.k8s.io
-    reclaimPolicy: Retain
-    volumeBindingMode: Immediate
-    mountOptions:
-      - hard
-      - nfsvers=4.1
-    parameters:
-      server: synology.home.adamatyi.com
-      share: /volume1/media
-      subDir: ""
