@@ -1,6 +1,0 @@
-csi-driver-nfs:
-  controller:
-    replicas: 1
-  node:
-    tolerations: [] 
-    
