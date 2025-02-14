@@ -1,5 +1,6 @@
 preUpgradeChecker:
   jobEnabled: false
+  upgradeVersionCheck: false
 
 persistence:
   defaultClass: true
