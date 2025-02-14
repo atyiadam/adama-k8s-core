@@ -1,0 +1,14 @@
+persistence:
+  defaultClass: true
+  defaultClassReplicaCount: 3
+  reclaimPolicy: Delete
+
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: false
+
+defaultSettings:
+  backupTarget: ""
+  backupTargetCredentialSecret: ""
