@@ -1,9 +1,9 @@
 apiVersion: v2
 name: longhorn
 description: A Helm chart for Longhorn, a distributed block storage system for Kubernetes.
-version: 1.8.0
-appVersion: v1.8.0
+version: 1.8.1
+appVersion: v1.8.1
 dependencies:
   - name: longhorn
-    version: 1.8.0
+    version: 1.8.1
     repository: https://charts.longhorn.io
