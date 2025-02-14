@@ -1,3 +1,6 @@
+helmPreUpgradeCheckerJob:
+  enabled: false
+
 persistence:
   defaultClass: true
   defaultClassReplicaCount: 3
