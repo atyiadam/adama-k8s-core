@@ -1,11 +1,14 @@
 preUpgradeChecker:
   jobEnabled: false
-  upgradeVersionCheck: false
+  enabled: false
+  upgrade:
+    checker:
+      enabled: false
 
 persistence:
   defaultClass: true
-  defaultClassReplicaCount: 3
-  reclaimPolicy: Delete
+  defaultClassReplicaCount: 2
+  reclaimPolicy: Retain
 
 service:
   type: ClusterIP
