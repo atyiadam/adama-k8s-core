@@ -1,9 +1,5 @@
 preUpgradeChecker:
   jobEnabled: false
-  enabled: false
-  upgrade:
-    checker:
-      enabled: false
 
 persistence:
   defaultClass: true
