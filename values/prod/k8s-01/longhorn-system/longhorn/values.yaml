@@ -1,1 +1,1 @@
-# replicas: 1 # volume replica count
+replicas: 1 # volume replica count
