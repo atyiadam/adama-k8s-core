@@ -1,2 +1,3 @@
 replicas: 2 # volume replica count for volumes created from UI
 numberOfReplicas: 2 # volume replica count for volumes created via the StorageClass
+
