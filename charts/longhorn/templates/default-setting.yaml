@@ -12,4 +12,4 @@ data:
   default-setting.yaml: |-
     priority-class: longhorn-critical
     disable-revision-counter: true
-    replicas: {{ .Values.replicas | default 1 }}
+    default-replica-count: {{ .Values.replicas | default 1 }}
