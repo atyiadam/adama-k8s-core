@@ -21,7 +21,7 @@ data:
     reclaimPolicy: "Delete"
     volumeBindingMode: Immediate
     parameters:
-      numberOfReplicas: "3"
+      numberOfReplicas: {{ .Values.numberOfReplicas | default 3 }}
       staleReplicaTimeout: "30"
       fromBackup: ""
       fsType: "ext4"
