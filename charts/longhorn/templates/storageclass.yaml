@@ -29,3 +29,22 @@ data:
       unmapMarkSnapChainRemoved: "ignored"
       disableRevisionCounter: "true"
       dataEngine: "v1"
+---
+# Own StorageClass with Retain policy
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: longhorn-retain
+provisioner: driver.longhorn.io
+allowVolumeExpansion: true
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+parameters:
+  numberOfReplicas: {{ .Values.numberOfReplicas | default 3 }}
+  staleReplicaTimeout: "30"
+  fromBackup: ""
+  fsType: "ext4"
+  dataLocality: "disabled"
+  unmapMarkSnapChainRemoved: "ignored"
+  disableRevisionCounter: "true"
+  dataEngine: "v1"
