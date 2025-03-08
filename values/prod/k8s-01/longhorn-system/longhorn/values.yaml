@@ -1,32 +1,32 @@
-# longhorn:
-#   preUpgradeChecker:
-#     jobEnabled: false
-#   
-#   persistence:
-#     defaultClass: true
-#     defaultClassReplicaCount: 2
-#     reclaimPolicy: Retain
-#   
-#   defaultSettings:
-#     backupTarget: "nfs://10.10.30.2:/volume1/backups/longhorn/k8s-01-prod"
-#     backupTargetCredentialSecret: ""
-#     createDefaultDiskLabeledNodes: true
-#     defaultDataPath: /var/lib/longhorn/
-#     replicaSoftAntiAffinity: true
-#     storageOverProvisioningPercentage: 200
-#     storageMinimalAvailablePercentage: 10
-#     upgradeChecker: true
-#     defaultReplicaCount: 2
-#   
-#   resources:
-#     limits:
-#       cpu: 500m
-#       memory: 1Gi
-#     requests:
-#       cpu: 100m
-#       memory: 256Mi
-#   
-#   service:
-#     ui:
-#       type: NodePort
-#       nodePort: 30085
+longhorn:
+  preUpgradeChecker:
+    jobEnabled: false
+  
+  persistence:
+    defaultClass: true
+    defaultClassReplicaCount: 2
+    reclaimPolicy: Retain
+  
+  defaultSettings:
+    backupTarget: "nfs://10.10.30.2:/volume1/backups/longhorn/k8s-01-prod"
+    backupTargetCredentialSecret: ""
+    createDefaultDiskLabeledNodes: true
+    defaultDataPath: /var/lib/longhorn/
+    replicaSoftAntiAffinity: true
+    storageOverProvisioningPercentage: 200
+    storageMinimalAvailablePercentage: 10
+    upgradeChecker: true
+    defaultReplicaCount: 2
+  
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 256Mi
+  
+  service:
+    ui:
+      type: NodePort
+      nodePort: 30085
